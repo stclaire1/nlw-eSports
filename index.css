@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    background-image: url('/assets/bg.jpg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-color: #121214;
+    line-height: 160%;
+}
+
+header{
+    padding-top: 32px;
+    height: calc(120px + 32px);
+}
+
+header div{
+    width: 120px;
+    margin: auto;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    border-radius: 50%;
+
+    display: flex;
+    padding: 4px;
+
+    animation: fromTop .5s backwards;
+    transition: .3s;
+}
+
+header div:hover{
+    scale: 1.1;
+}
+
+header div img{
+    width: 100%;
+    border-radius: 50%;
+
+}
+
+main{
+    max-width: 580px;
+    width: 90%;
+    margin: 32px auto;
+
+    display: grid;
+    gap: 24px;
+}
+
+section{
+    color: white;
+    background-image: linear-gradient(90deg, #9572FC 0%, #43E7AD 50.52%, #E2D45C 100%);
+    padding-top: 4px;
+    border-radius: 10px;
+
+    animation: fromBottom .5s backwards
+}
+
+section:nth-child(1){
+    animation-delay: 0s;
+}
+
+section:nth-child(2){
+    animation-delay: .2s;
+}
+
+section:nth-child(3){
+    animation-delay: .4s;
+}
+
+article{
+    background-color: #2A2634;
+    padding: 32px;
+    padding-top: 24px;
+    border-radius: 8px;
+}
+
+article h2{
+    letter-spacing: -0.47px;
+}
+
+article p{
+    letter-spacing: -0.18px;
+    color: #A1A1AA;
+    margin-top: 10px;
+}
+
+article .games-container{
+    margin-top: 32px;
+}
+
+article ul{
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 16px;
+    margin-top: 24px;
+}
+
+article ul li{
+    transition: .3s;
+}
+
+article ul li:hover{
+    scale: 1.1;
+}
+
+.games-container img{
+    width: 90px;
+    border-radius: 8px;
+}
+
+.streamers-list img{
+    width: 70px;
+    border: #443E54 1px solid;
+    border-radius: 50%;
+}
+
+@keyframes fromTop {
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fromBottom {
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
